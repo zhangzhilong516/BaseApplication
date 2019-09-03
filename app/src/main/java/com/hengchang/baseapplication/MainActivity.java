@@ -1,5 +1,6 @@
 package com.hengchang.baseapplication;
 
+import io.reactivex.android.plugins.RxAndroidPlugins;
 import io.reactivex.schedulers.Schedulers;
 
 import android.os.Bundle;
@@ -31,7 +32,6 @@ public class MainActivity extends MVPBaseActivity<MainPresenter> implements MVPB
         Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
 
 
-
     }
 
     public void getContacts(View view){
@@ -47,7 +47,6 @@ public class MainActivity extends MVPBaseActivity<MainPresenter> implements MVPB
 
                     @Override
                     public void OnError(Throwable e) {
-
                     }
                 });
     }

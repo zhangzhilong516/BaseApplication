@@ -34,8 +34,8 @@ public abstract class BaseObserver<T> implements Observer<T> {
 
     @Override
     public void onError(Throwable e) {
-        dispose();
         onError(e);
+        dispose();
     }
 
     @Override
